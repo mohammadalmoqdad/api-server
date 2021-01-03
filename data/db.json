@@ -1,0 +1,33 @@
+{
+  "categories": [
+    {
+      "id": 2,
+      "name": "electronics",
+      "display_name": "category -2-",
+      "description": "this is a descreption of -2-"
+    }
+  ],
+  "products": [
+    {
+      "id": 1,
+      "name": "samsung tablet",
+      "display_name": "tablet",
+      "category": "smart devices",
+      "description": "this is a descreption of -1-"
+    },
+    {
+      "id": 2,
+      "name": "samsung phone",
+      "display_name": "phone",
+      "category": "smart devices",
+      "description": "this is a descreption of -2-"
+    },
+    {
+      "id": 3,
+      "name": "samsung computer",
+      "display_name": "computer",
+      "category": "smart devices",
+      "description": "this is a descreption of -3-"
+    }
+  ]
+}
