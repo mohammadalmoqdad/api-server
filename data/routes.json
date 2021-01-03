@@ -1,0 +1,7 @@
+{
+    "/api-v1/*": "/$1",
+    "/:categories/:id/": "/:resource/:id",
+    "/:categories/": "/:categories/",
+    "/products/:id/": "/:products/:id",
+    "/products/": "/:products/"
+  }
