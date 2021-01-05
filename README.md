@@ -37,6 +37,6 @@ i.e.
 
 
 
-[My URL is: https://app.swaggerhub.com/apis/mukdad/default-title/0.1 ]('https://app.swaggerhub.com/apis/mukdad/default-title/0.1')
+[My URL is](https://app.swaggerhub.com/apis/mukdad/default-title/0.1)
 
 ![my UML](./assests/api-server-UML-1.png)
