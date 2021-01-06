@@ -1,8 +1,8 @@
 'use strict';
 
 const { server } = require('../lib/server');
-const supertest = require('supertest');
-const mockRequest = supertest(server);
+const supergoose = require('@code-fellows/supergoose');
+const mockRequest = supergoose(server);
 
 
 
@@ -33,7 +33,7 @@ describe("Products routes model", () => {
 
 
     it('test route products/:id (GET One)', () => {
-        return mockRequest.get('/products/1').then(result => {
+        return mockRequest.get('/products/5ff526b3ae80135ba1e43e23').then(result => {
             expect(result.status).toBe(200);
         });
     });
@@ -51,7 +51,7 @@ describe("Products routes model", () => {
 
 
     it('test route products/:id (put)', () => {
-        return mockRequest.put('/products/2').then(result => {
+        return mockRequest.put('/products/5ff526b3ae80135ba1e43e23').then(result => {
             expect(result.status).toBe(201);
         });
     });
@@ -61,7 +61,7 @@ describe("Products routes model", () => {
 
 
     it('test route products/:id (delete)', () => {
-        return mockRequest.delete('/products/2').then(result => {
+        return mockRequest.delete('/products/5ff526b3ae80135ba1e43e23').then(result => {
             expect(result.status).toBe(201);
         });
     });
@@ -101,7 +101,7 @@ describe("catigories routes model", () => {
 
 
     it('test route categories/:id (GET One)', () => {
-        return mockRequest.get('/categories/1').then(result => {
+        return mockRequest.get('/categories/5ff52748ae80135ba1e43e27').then(result => {
             expect(result.status).toBe(200);
         });
     });
@@ -120,7 +120,7 @@ describe("catigories routes model", () => {
 
 
     it('test route categories/:id (put)', () => {
-        return mockRequest.put('/categories/2').then(result => {
+        return mockRequest.put('/categories/5ff52748ae80135ba1e43e27').then(result => {
             expect(result.status).toBe(201);
         });
     });
@@ -129,7 +129,7 @@ describe("catigories routes model", () => {
 
     
     it('test route categories/:id (delete)', () => {
-        return mockRequest.delete('/categories/2').then(result => {
+        return mockRequest.delete('/categories/5ff52748ae80135ba1e43e27').then(result => {
             expect(result.status).toBe(201);
         });
     });

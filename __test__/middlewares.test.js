@@ -3,7 +3,6 @@ const { server } = require('../lib/server');
 const supertest = require('supertest');
 const mockRequest = supertest(server);
 const currentTime = require('../middleware/timestamp')
-let logger = require('../middleware/logger')
 describe("middlewares model", () => {
 
 
@@ -23,18 +22,6 @@ describe("middlewares model", () => {
 
     afterEach(()=> {
         consoleSpy.mockRestore();
-    });
-
-
-
-
-
-    it('Logger should be correctly used', ()=>{
-        let req = {};
-        let res = {};
-        let next = jest.fn();
-        logger(req, res, next);
-        expect(consoleSpy).toHaveBeenCalled();
     });
 
 
