@@ -1,5 +1,4 @@
 const { server } = require('../lib/server');
-
 const supergoose = require('@code-fellows/supergoose');
 const mockRequest = supergoose(server);
 
@@ -142,7 +141,6 @@ describe('catigories APIs', () => {
         const record = data.body;
         const PorductResponse = await mockRequest.delete(`/categories/${record._id}`);
         const productItem = PorductResponse.body;
-
         Object.keys(categoryObj).forEach(key => {
             expect(productItem[key]).toEqual(categoryObj[key]);
         });
