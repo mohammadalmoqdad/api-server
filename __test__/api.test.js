@@ -31,8 +31,10 @@ describe('products APIs', () => {
         };
         const data = await mockRequest.post('/products').send(productObj);
         const record = data.body;
+        console.log(record);
         const PorductResponse = await mockRequest.get(`/products/${record._id}`);
-        const productItem = PorductResponse.body[0];
+        console.log(PorductResponse.body);
+        const productItem = PorductResponse.body.results[0];
         Object.keys(productObj).forEach(key => {
             expect(productItem[key]).toEqual(productObj[key]);
         });
@@ -120,7 +122,7 @@ describe('catigories APIs', () => {
         const data = await mockRequest.post('/categories').send(categoryObj);
         const record = data.body;
         const PorductResponse = await mockRequest.get(`/categories/${record._id}`);
-        const productItem = PorductResponse.body[0];
+        const productItem = PorductResponse.body.results[0];
         Object.keys(categoryObj).forEach(key => {
             expect(productItem[key]).toEqual(categoryObj[key]);
         });
