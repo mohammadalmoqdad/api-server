@@ -2,7 +2,7 @@ let server = require('./lib/server.js');
 require('dotenv');
 
 let mongoose = require('mongoose');
-let MONGOOSE_URI = "mongodb://localhost:27017/lab8Store"
+let MONGOOSE_URI = "mongodb+srv://labTest:1234@cluster0-zjquu.mongodb.net/test"
 
 mongoose.connect(MONGOOSE_URI, {
     useNewUrlParser: true,
