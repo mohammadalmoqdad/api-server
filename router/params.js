@@ -1,6 +1,7 @@
 const express = require('express');
 const products = require('../lib/modules/products/product-collection');
 const catigories = require('../lib/modules/catigories/categories-collection');
+const todos= require('../lib/modules/todo/todo-collections');
 const router = express.Router();
 
 
@@ -21,9 +22,13 @@ function getModel(req, res, next) {
         case "products":
             req.model = products;
             next();
-            break;  
+            break;
         case "categories":
             req.model = catigories;
+            next();
+            break;
+        case "todos":
+            req.model = todos;
             next();
             break;
         default:
